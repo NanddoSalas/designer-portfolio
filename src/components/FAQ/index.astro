@@ -1,0 +1,65 @@
+---
+import Container from "../../layouts/Container.astro";
+import Button from "../Button.astro";
+import Card from "../Card.astro";
+import Heading from "../Heading.astro";
+import SectionTitle from "../SectionTitle.astro";
+import SkillIcon from "../Skills/SkillIcon.astro";
+import Text from "../Text.astro";
+import Question from "./Question.astro";
+---
+
+<Container>
+  <div class="space-y-[40px] lg:space-y-[60px] 3xl:space-y-[80px]">
+    <SectionTitle
+      title="Frequently Asked Questions"
+      text="Here are answers to some common questions"
+    />
+
+    <div
+      class="flex flex-col lg:flex-row space-y-[30px] lg:space-y-0 lg:space-x-[30px]"
+    >
+      <Card class="space-y-[20px] lg:space-y-[24px] flex-1">
+        <Question
+          name="Can you work with clients remotely?"
+          answer="Absolutely! I have experience working with clients from all around the world. Through effective communication channels such as email, video calls, and project management tools, I ensure seamless collaboration regardless of geographical location."
+        />
+
+        <Question
+          name="How long does it typically take to complete a web design project?"
+        />
+
+        <Question name="Do you offer website maintenance services?" />
+
+        <Question name="Can you optimize my website for search engines?" />
+
+        <Question
+          name="Can you integrate third-party tools or platforms into my website?"
+        />
+      </Card>
+
+      <div class="lg:max-w-[413px]">
+        <Card
+          class="space-y-[20px] lg:space-y-[24px] flex flex-col items-center lg:items-start"
+        >
+          <div>
+            <SkillIcon name="white-star" />
+          </div>
+
+          <div class="text-center lg:text-start">
+            <Heading class="text-[18px]">Still have any Questions ?</Heading>
+            <Text class="text-[14px] lg:text-[16px]">
+              Let's collaborate to create an exceptional website that sets you
+              apart from the competition. Contact me today to discuss your web
+              design needs and bring your digital vision to life!
+            </Text>
+          </div>
+
+          <a href="/contact">
+            <Button text="Contact Me" />
+          </a>
+        </Card>
+      </div>
+    </div>
+  </div>
+</Container>

@@ -1,0 +1,59 @@
+---
+import Icon from "astro-icon";
+import Container from "../../layouts/Container.astro";
+import SectionTitle from "../SectionTitle.astro";
+import Text from "../Text.astro";
+import Testimonial from "./Testimonial.astro";
+---
+
+<Container>
+  <div class="space-y-[40px] lg:space-y-[60px] 3xl:space-y-[80px]">
+    <SectionTitle
+      title="What My Clients say About Me"
+      text="Here's what some of my satisfied clients have to say about my work"
+    />
+
+    <div class="space-y-[30px]">
+      <div class="pb-[20px] flex justify-between items-center">
+        <Text class="font-medium text-[14px] lg:text-[16px]">
+          37 Total Reviews
+        </Text>
+
+        <div class="flex space-x-[14px] lg:space-x-[16px]">
+          <div
+            class="bg-peach-98 p-[8px] border-peach-85 border-[1px] rounded-[6px]"
+          >
+            <Icon name="arrow-left" class="w-[26px] h-[26px]" />
+          </div>
+
+          <div
+            class="bg-peach-98 p-[8px] border-peach-85 border-[1px] rounded-[6px]"
+          >
+            <Icon name="arrow-right" class="w-[26px] h-[26px]" />
+          </div>
+        </div>
+      </div>
+
+      <div class="grid gap-[20px] sm:grid-cols-2 xl:grid-cols-3">
+        <Testimonial
+          name="Sarah Thompson"
+          text="Jeffery Cannon is an incredibly talented web designer. His attention to detail and creative flair are unmatched. He took my website from ordinary to extraordinary, capturing the essence of my brand perfectly. Working with Jeffery was a breeze, as he listened to my needs and provided expert guidance throughout the design process. I highly recommend Jeffery for anyone looking to elevate their online presence."
+        />
+
+        <div class="hidden sm:block">
+          <Testimonial
+            name="Emily Roberts"
+            text="I am thrilled with the website that Jeffery Cannon designed for my business. His ability to translate my vision into a visually stunning and user-friendly website was impressive. Jeffery's expertise in web design and user experience truly shines through in his work. He was responsive, professional, and delivered the project on time. I couldn't be happier with the outcome and highly recommend Jeffery to anyone in need of a top-notch web designer."
+          />
+        </div>
+
+        <div class="hidden xl:block">
+          <Testimonial
+            name="Laura Adams"
+            text="I had the pleasure of collaborating with Jeffery Cannon on a web design project, and I am beyond impressed with the results. Jeffery's creativity and technical expertise transformed our website into a visually stunning and highly functional platform. His understanding of user experience design and attention to detail made a significant impact on our website's performance and user engagement. Jeffery's professionalism, timely delivery."
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</Container>

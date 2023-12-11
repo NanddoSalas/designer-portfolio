@@ -1,0 +1,52 @@
+---
+import Container from "../../layouts/Container.astro";
+import SectionTitle from "../SectionTitle.astro";
+import Skill from "./Skill.astro";
+---
+
+<Container>
+  <div class="space-y-[40px] lg:space-y-[60px] 3xl:space-y-[80px]">
+    <SectionTitle
+      title="Creative Skills"
+      text="As a web designer, I possess a diverse set of skills and expertise to bring your web design visions to life"
+    />
+
+    <div class="grid gap-[20px] 3xl:gap-[30px] md:grid-cols-2 lg:grid-cols-3">
+        <Skill
+          icon="web-skill"
+          title="Web Design Principles"
+          text="Proficiency in the fundamental principles of design, such as layout, color theory, typography, and visual hierarchy."
+        />
+
+        <Skill
+          icon="ui-skill"
+          title="User Interface - UI Design"
+          text="Ability to create visually appealing and intuitive user interfaces that enhance user experience and engagement."
+        />
+
+        <Skill
+          icon="ux-skill"
+          title="User Experience - UX Design"
+          text="Understanding of user behavior and psychology to design seamless and enjoyable user experiences that meet user needs and goals."
+        />
+
+        <Skill
+          icon="responsive-skill"
+          title="Responsive Web Design"
+          text="Knowledge of designing websites that adapt and function seamlessly across various devices and screen sizes."
+        />
+
+        <Skill
+          icon="wireframing-skill"
+          title="Wireframing and Prototyping"
+          text="Ability to create wireframes and interactive prototypes to visualize and test website layouts and functionality."
+        />
+
+        <Skill
+          icon="mobile-skill"
+          title="Mobile-Friendly Optimization"
+          text="Proficiency in the fundamental principles of design, such as layout, color theory, typography, and visual hierarchy."
+        />
+    </div>
+  </div>
+</Container>

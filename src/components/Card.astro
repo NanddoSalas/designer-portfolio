@@ -1,0 +1,12 @@
+---
+interface Props {
+  class?: string;
+}
+---
+
+<div
+  class={"bg-peach-96 p-[30px] lg:p-[40px] 3xl:p-[50px] rounded-[12px] " +
+    Astro.props.class}
+>
+  <slot />
+</div>

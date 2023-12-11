@@ -1,0 +1,14 @@
+---
+import Heading from "./Heading.astro";
+import Text from "./Text.astro";
+
+const { title, text } = Astro.props;
+---
+
+<div class="text-center">
+  <Heading class="text-[28px] lg:text-[38px] 3xl:text-[48px]">{title}</Heading>
+
+  <Text class="text-[14px] lg:text-[16px] 3xl:text-[18px]">
+    {text}
+  </Text>
+</div>

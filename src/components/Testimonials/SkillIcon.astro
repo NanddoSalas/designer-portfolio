@@ -1,0 +1,14 @@
+---
+import Icon from "astro-icon";
+interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+---
+
+<div class="inline-block">
+  <div class="p-[8px] lg:p-[10px] rounded-[8px] border-peach-90 border-[1px]">
+    <Icon name={name} class="w-[20px] lg:w-[24px] h-[20px] lg:h-[24px]" />
+  </div>
+</div>

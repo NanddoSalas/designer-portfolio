@@ -1,0 +1,44 @@
+---
+interface Props {
+  name: string;
+  text: string;
+}
+
+import Icon from "astro-icon";
+import Card from "../Card.astro";
+import Heading from "../Heading.astro";
+import Text from "../Text.astro";
+import SocialIcon from "./SkillIcon.astro";
+
+const { name, text } = Astro.props;
+---
+
+<Card class="space-y-[20px] lg:space-y-[24px]">
+  <div class="flex justify-between items-center">
+    <div>
+      <Heading class="font-medium text-[14px] lg:text-[16px]">{name}</Heading>
+
+      <Text class="font-normal text-gray-40 text-[12px] lg:text-[14px]">
+        produce-ui.com
+      </Text>
+    </div>
+
+    <div class="flex space-x-[8px]">
+      <SocialIcon name="purple-linkedin" />
+      <SocialIcon name="facebook" />
+      <SocialIcon name="purple-twitter" />
+    </div>
+  </div>
+
+  <div class="flex space-x-[3px]">
+    <Icon name={"star"} class="w-[20px] h-[20px]" />
+    <Icon name={"star"} class="w-[20px] h-[20px]" />
+    <Icon name={"star"} class="w-[20px] h-[20px]" />
+    <Icon name={"star"} class="w-[20px] h-[20px]" />
+    <Icon name={"star"} class="w-[20px] h-[20px]" />
+  </div>
+
+  <div>
+    <Text class="text-[12px] lg:text-[16px]">{text}</Text>
+  </div>
+</Card>

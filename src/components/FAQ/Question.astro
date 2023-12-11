@@ -1,0 +1,36 @@
+---
+import Icon from "astro-icon";
+import Heading from "../Heading.astro";
+import Text from "../Text.astro";
+
+interface Props {
+  name: string;
+  answer?: string;
+}
+
+const { name, answer } = Astro.props;
+---
+
+<div class="flex justify-between bg-peach-92 rounded-[8px] py-[20px] px-[24px]">
+  <div class="space-y-[16px] lg:space-y-[10px]">
+    <Heading class="font-medium text-[16px] lg:text-[18px]">
+      {name}
+    </Heading>
+
+    {answer && <Text class="text-[14px] lg:text-[16px]">{answer}</Text>}
+  </div>
+
+  <div>
+    <div
+      class="bg-peach-98 p-[8px] border-peach-85 border-[1px] rounded-[6px] ml-[40px]"
+    >
+      {
+        answer ? (
+          <Icon name="x" class="w-[26px] h-[26px] rotate-45" />
+        ) : (
+          <Icon name="x" class="w-[26px] h-[26px]" />
+        )
+      }
+    </div>
+  </div>
+</div>

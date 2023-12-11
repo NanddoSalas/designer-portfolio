@@ -1,0 +1,22 @@
+---
+import Card from "../Card.astro";
+import Heading from "../Heading.astro";
+import Text from "../Text.astro";
+
+interface Props {
+  title: string;
+  text: string;
+}
+
+const { title, text } = Astro.props;
+---
+
+<Card class="flex flex-col space-y-[24px] 3xl:space-y-[30px] text-center">
+  <Heading class="text-[18px] lg:text-[20px] 3xl:text-[24px]">
+    {title}
+  </Heading>
+
+  <Text class="text-[14px] lg:text-[16px] 3xl:text-[18px]">
+    {text}
+  </Text>
+</Card>

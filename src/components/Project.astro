@@ -1,0 +1,30 @@
+---
+import Card from './Card.astro';
+import Heading from './Heading.astro';
+interface Props {
+  name: string;
+  image: string;
+}
+
+const { name, image } = Astro.props;
+---
+
+<Card class="space-y-[20px] lg:space-y-[24px] 3xl:space-y-[30px]">
+  <Heading class="text-[16px] 3xl:text-[20px] text-center ">{name}</Heading>
+
+  <div class="space-y-[20px]">
+
+    <img
+      src={image}
+      alt={name}
+      class=" rounded-[8px] 3xl:rounded-[12px] "
+    />
+
+    <div class="grid grid-cols-4 gap-[10px] lg:gap-[14px] 3xl:gap-[20px]">
+      <img src={image} alt={name} class="rounded-[4px] 3xl:rounded-[6px]" />
+      <img src={image} alt={name} class="rounded-[4px] 3xl:rounded-[6px]" />
+      <img src={image} alt={name} class="rounded-[4px] 3xl:rounded-[6px]" />
+      <img src={image} alt={name} class="rounded-[4px] 3xl:rounded-[6px]" />
+    </div>
+  </div>
+</Card>

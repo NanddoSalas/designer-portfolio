@@ -1,0 +1,34 @@
+---
+import Icon from "astro-icon";
+import Container from "../../layouts/Container.astro";
+import Button from "../Button.astro";
+import Logo from "../Logo.astro";
+import NavItem from "./NavItem.astro";
+---
+
+<div class="border-b-[1px] border-b-peach-85">
+  <Container>
+    <div class="flex justify-between items-center
+    py-[20px]">
+      <Logo />
+
+      <div
+        class="space-x-[30px] 3xl:space-x-[50px] hidden md:flex items-center"
+      >
+        <div>
+          <NavItem name="Home" href="/" />
+          <NavItem name="About Me" href="/about" />
+          <NavItem name="Portfolio" href="/portfolio" />
+          <NavItem name="Contact Me" href="/contact" />
+        </div>
+
+        <Button
+          text="Book a Call"
+          class="text-[14px] 3xl:text-[18px] py-[14px] px-[16px] 3xl:py-[16px] 3xl:px-[18px]"
+        />
+      </div>
+
+      <Icon name={'header-icon'} class="md:hidden w-[34px] h-[34px]" />
+    </div>
+  </Container>
+</div>

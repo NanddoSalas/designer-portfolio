@@ -1,0 +1,45 @@
+---
+import Container from "../../layouts/Container.astro";
+import SectionTitle from "../SectionTitle.astro";
+import Benefit from "./Benefit.astro";
+---
+
+<Container>
+  <div class="space-y-[40px] lg:space-y-[60px] 3xl:space-y-[80px]">
+    <SectionTitle
+      title="Benefits"
+      text="By choosing my web design service, you'll enjoy the following benefits"
+    />
+
+    <div class="space-y-[20px] 3xl:space-y-[30px]">
+      <div class="grid gap-[20px] 3xl:gap-[30px] md:grid-cols-2">
+        <Benefit
+          title="Customized Designs Tailored to Your Brand"
+          text="I understand the importance of creating a unique and memorable brand identity. By collaborating closely with you, I ensure that your website reflects your brand's personality, values, and objectives. The result is a customized design that sets you apart from the competition and resonates with your target audience."
+        />
+
+        <Benefit
+          title="Creative Excellence that Captivates Visitors"
+          text="With a keen eye for aesthetics and a passion for creativity, I excel in designing visually stunning and engaging websites. By combining beautiful visuals, captivating typography, and strategic use of color, I create an immersive and impactful user experience. Your website will leave a lasting impression on visitors, enhancing your brand's credibility and professionalism."
+        />
+      </div>
+
+      <div class="grid gap-[20px] 3xl:gap-[30px] lg:grid-cols-3">
+        <Benefit
+          title="User-Centric Approach for Optimal Experience"
+          text="I prioritize user experience (UX) design, placing your visitors at the center of the design process. By conducting in-depth research and employing user testing techniques, I ensure that your website is intuitive, easy to navigate, and seamlessly guides users towards their goals. The result is a satisfying user journey that increases engagement and conversions."
+        />
+
+        <Benefit
+          title="Mobile-Friendly Designs for Broad Accessibilit"
+          text="In today's mobile-dominated landscape, having a responsive website is crucial. I specialize in creating mobile-friendly designs that adapt flawlessly across different devices and screen sizes. Your website will look and perform beautifully, whether accessed from a desktop, smartphone, or tablet, ensuring that you reach and engage your audience effectively."
+        />
+
+        <Benefit
+          title="Expertise in Cutting-Edge Technologies"
+          text="With a strong command of HTML, CSS, JavaScript, and other front-end technologies, I possess the technical skills to bring your design concepts to life. From seamless animations to interactive elements, I leverage the latest web technologies to enhance user engagement and create a dynamic user experience."
+        />
+      </div>
+    </div>
+  </div>
+</Container>

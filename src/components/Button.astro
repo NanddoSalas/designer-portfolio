@@ -1,0 +1,11 @@
+---
+interface Props {
+  text: string;
+  class?: string;
+}
+---
+
+<button
+  class={"bg-purple-50 text-peach-99 text-[14px] rounded-[6px] px-[20px] py-[14px] font-medium " +
+    Astro.props.class}>{Astro.props.text}</button
+>

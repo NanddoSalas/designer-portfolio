@@ -1,0 +1,25 @@
+---
+import Icon from "astro-icon";
+import Project from "./Project.astro";
+
+---
+
+<div class="flex flex-col md:hidden space-y-[20px]">
+  <Project name="Skill Bridge Website Design" image="/project3.png" />
+
+  <div class="px-[20px] flex justify-between">
+    <div class="bg-peach-98 p-[8px] border-peach-85 border-[1px] rounded-[6px]">
+      <Icon name="arrow-left" class="w-[26px] h-[26px]" />
+    </div>
+
+    <div class="flex space-x-[2px] items-center">
+      <div class="w-[30px] h-[5px] rounded-[52px] bg-peach-85"></div>
+      <div class="w-[30px] h-[5px] rounded-[52px] bg-purple-50"></div>
+      <div class="w-[30px] h-[5px] rounded-[52px] bg-peach-85"></div>
+    </div>
+
+    <div class="bg-peach-98 p-[8px] border-peach-85 border-[1px] rounded-[6px]">
+      <Icon name="arrow-right" class="w-[26px] h-[26px]" />
+    </div>
+  </div>
+</div>

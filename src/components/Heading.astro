@@ -1,0 +1,8 @@
+---
+interface Props {
+  class?: string
+}
+
+---
+
+<p class={"text-gray-10 font-semibold " + Astro.props.class}><slot/></p>

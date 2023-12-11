@@ -1,0 +1,34 @@
+---
+import Container from "../../layouts/Container.astro";
+import Button from "../Button.astro";
+import Project from "../Project.astro";
+import ProjectsCarousel from "../ProjectsCarousel.astro";
+import SectionTitle from "../SectionTitle.astro";
+---
+
+<Container>
+  <div class="space-y-[40px] lg:space-y-[60px] 3xl:space-y-[80px]">
+    <SectionTitle
+      title="My Works"
+      text="Here's what some of my satisfied clients have to say about my work"
+    />
+
+    <div class="space-y-[40px] 3xl:space-y-[50px]">
+      <div class="hidden md:flex space-x-[20px] 3xl:space-x-[30px]">
+        <Project name="Z - Aura Perfume Website Design" image="/project1.png" />
+
+        <Project name="Forhelp Charity Website Design" image="/project2.png" />
+
+        <Project name="Skill Bridge Website Design" image="/project3.png" />
+      </div>
+
+      <ProjectsCarousel />
+
+      <div class="flex justify-center">
+        <a href="/portfolio">
+          <Button text="View All Projects ->" />
+        </a>
+      </div>
+    </div>
+  </div>
+</Container>

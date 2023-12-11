@@ -1,0 +1,21 @@
+---
+interface Props {
+  name: string;
+  href: string;
+}
+
+const { href, name } = Astro.props;
+
+const isActive = Astro.url.pathname === href;
+---
+
+<a
+  href={href}
+  class="font-medium text-gray-20
+  rounded-[6px] 3xl:rounded-[8px]
+  text-[14px] 3xl:text-[18px]
+  py-[12px] px-[22px] 3xl:py-[14px] 3xl:px-[24px]"
+
+  style={{background: isActive? '#F5F3F0': ''}}
+  >{name}</a
+>
