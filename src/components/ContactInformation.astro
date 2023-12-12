@@ -1,0 +1,152 @@
+---
+import Icon from "astro-icon";
+import Text from "../components/Text.astro";
+import Container from "../layouts/Container.astro";
+import Button from "./Button.astro";
+import SocialIcon from "./Footer/SocialIcon.astro";
+import Heading from "./Heading.astro";
+import TextField from "./TextField.astro";
+---
+
+<Container>
+  <div class="flex flex-col-reverse md:flex-row gap-[40px]">
+    <div class="space-y-[30px] md:w-1/2 lg:w-1/3">
+      <div class="space-y-[14px]">
+        <div
+          class="bg-peach-96 rounded-[6px] py-[20px] px-[24px] flex justify-between items-center"
+        >
+          <div>
+            <Text class="text-[14px]">You can Email Me Here</Text>
+
+            <Heading class="text-[16px] font-medium">
+              jefferycannon@gmail.com
+            </Heading>
+          </div>
+
+          <div
+            class="p-[8px] bg-peach-95 rounded-[6px] border-[1px] border-peach-85"
+          >
+            <Icon name="arrow-right" class="w-[24px] h-[24px]" />
+          </div>
+        </div>
+
+        <div
+          class="bg-peach-96 rounded-[6px] py-[20px] px-[24px] flex justify-between items-center"
+        >
+          <div>
+            <Text class="text-[14px]">Give Me a Call on</Text>
+
+            <Heading class="text-[16px] font-medium">+91 91813 23 2309</Heading>
+          </div>
+
+          <div
+            class="p-[8px] bg-peach-95 rounded-[6px] border-[1px] border-peach-85"
+          >
+            <Icon name="arrow-right" class="w-[24px] h-[24px]" />
+          </div>
+        </div>
+
+        <div
+          class="bg-peach-96 rounded-[6px] py-[20px] px-[24px] flex justify-between items-center"
+        >
+          <div>
+            <Text class="text-[14px]">Location</Text>
+
+            <Heading class="text-[16px] font-medium">
+              Somewhere in the World
+            </Heading>
+          </div>
+
+          <div
+            class="p-[8px] bg-peach-95 rounded-[6px] border-[1px] border-peach-85"
+          >
+            <Icon name="arrow-right" class="w-[24px] h-[24px]" />
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-[16px] text-center md:text-start">
+        <Text class="text-[16px] font-medium">My Social Profiles</Text>
+
+        <div class="flex justify-center md:justify-start">
+          <div class="flex space-x-[20px] p-[16px] rounded-[10px] bg-peach-96">
+            <SocialIcon name="linkedin" />
+
+            <SocialIcon name="twitter" />
+
+            <SocialIcon name="dribbble" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="flex-1 p-[24px] lg:p-[50px] rounded-[10px] bg-peach-96 space-y-[24px] lg:space-y-[30px]"
+    >
+      <div class="grid gap-[16px] lg:grid-cols-2">
+        <TextField placeHolder="First Name" />
+        <TextField placeHolder="Last Name" />
+        <TextField placeHolder="Email" />
+        <TextField placeHolder="Phone Number" />
+      </div>
+
+      <div
+        class="bg-peach-95 p-[24px] lg:p-[30px] rounded-[6px] border-peach-90 border-[1px] space-y-[24px] lg:space-y-[30px]"
+      >
+        <Heading class="font-medium text-[16px]">
+          Why are you contacting us?
+        </Heading>
+
+        <div class="grid gap-[16px] lg:grid-cols-2">
+          <div class="flex space-x-[6px] lg:space-x-[16px]">
+            <input
+              type="checkbox"
+              class="w-[24px] h-[24px] bg-peach-92 border-peach-90 border-[1px] rounded-[4px]"
+            />
+
+            <Text class="text-[14px] lg:text-[16px]">Web Design</Text>
+          </div>
+
+          <div class="flex space-x-[6px] lg:space-x-[16px]">
+            <input
+              type="checkbox"
+              class="w-[24px] h-[24px] bg-peach-92 border-peach-90 border-[1px] rounded-[4px]"
+            />
+
+            <Text class="text-[14px] lg:text-[16px]">Collaboration</Text>
+          </div>
+
+          <div class="flex space-x-[6px] lg:space-x-[16px]">
+            <input
+              type="checkbox"
+              class="w-[24px] h-[24px] bg-peach-92 border-peach-90 border-[1px] rounded-[4px]"
+            />
+
+            <Text class="text-[14px] lg:text-[16px]">Mobile Ap Design</Text>
+          </div>
+
+          <div class="flex space-x-[6px] lg:space-x-[16px]">
+            <input
+              type="checkbox"
+              class="w-[24px] h-[24px] bg-peach-92 border-peach-90 border-[1px] rounded-[4px]"
+            />
+
+            <Text class="text-[14px] lg:text-[16px]">Others</Text>
+          </div>
+        </div>
+      </div>
+
+      <div class="">
+        <textarea
+          class="w-full bg-peach-96 border-peach-90 border-[1px] p-[24px] outline-none"
+          rows="5"
+          style="resize:none"
+          placeholder="Your Message here..."></textarea>
+      </div>
+
+      <div class="flex justify-center">
+        <Button text="Send" class="w-full md:w-fit" />
+      </div>
+    </div>
+  </div>
+</Container>

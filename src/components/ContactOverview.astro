@@ -1,0 +1,37 @@
+---
+import Container from "../layouts/Container.astro";
+import Badge from "./Badge.astro";
+import Heading from "./Heading.astro";
+import SkillIcon from "./Skills/SkillIcon.astro";
+import Text from "./Text.astro";
+---
+
+<Container>
+  <div
+    class="py-[40px] px-[30px] lg:py-[60px] lg:px-[100px] space-y-[30px] bg-peach-96 rounded-[10px] mt-[30px] lg:mt-[60px]"
+  >
+    <div class="flex justify-center">
+      <SkillIcon name={"chat"} />
+    </div>
+
+    <div class="text-center">
+      <Heading class="text-[28px] lg:text-[38px]">
+        We’d love to here from you.
+      </Heading>
+
+      <Text class="text-[14px] lg:text-[16px]">
+        Here's what some of my satisfied clients have to say about my work
+      </Text>
+    </div>
+
+    <div
+      class="flex flex-col lg:flex-row gap-[14px] items-center justify-center"
+    >
+      <Badge icon="clock" title="24 / 7 Assistance" />
+
+      <Badge icon="bolt" title="Quick Change Resolutions" />
+
+      <Badge icon="sparkles" title="Flexible Working hours" />
+    </div>
+  </div>
+</Container>

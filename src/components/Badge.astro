@@ -1,0 +1,20 @@
+---
+import Icon from "astro-icon";
+import Heading from "./Heading.astro";
+interface Props {
+  icon: string;
+  title: string;
+}
+
+const { icon, title } = Astro.props;
+---
+
+<div class="flex">
+  <div
+    class="border-peach-90 border-[1px] rounded-[6px] py-[10px] px-[14px] lg:py-[12px] lg:px-[16px] flex space-x-[4px] items-center"
+  >
+    <Icon name={icon} class="h-[14px] w-[24px]" />
+
+    <Heading class="font-medium text-[14px] lg:tex-[16px]">{title}</Heading>
+  </div>
+</div>

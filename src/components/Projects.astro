@@ -1,0 +1,119 @@
+---
+import Icon from "astro-icon";
+import Container from "../layouts/Container.astro";
+import Heading from "./Heading.astro";
+import Project from "./Project.astro";
+import ProjectsCarousel from "./ProjectsCarousel.astro";
+---
+
+<Container>
+  <div class="space-y-[60px]">
+    <div class="space-y-[20px] lg:space-y-[24px]">
+      <div class="flex justify-center items-center md:justify-between">
+        <Heading class="">Projects Done in 2023</Heading>
+
+        <div class="hidden md:flex space-x-[12px]">
+          <div
+            class="bg-peach-98 p-[8px] border-peach-85 border-[1px] rounded-[6px]"
+          >
+            <Icon name="arrow-left" class="w-[26px] h-[26px]" />
+          </div>
+
+          <div
+            class="bg-peach-98 p-[8px] border-peach-85 border-[1px] rounded-[6px]"
+          >
+            <Icon name="arrow-right" class="w-[26px] h-[26px]" />
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-[40px] 3xl:space-y-[50px]">
+        <div class="hidden md:flex space-x-[20px] 3xl:space-x-[30px]">
+          <Project
+            name="Z - Aura Perfume Website Design"
+            image="/project1.png"
+          />
+
+          <Project
+            name="Forhelp Charity Website Design"
+            image="/project2.png"
+          />
+
+          <Project name="Skill Bridge Website Design" image="/project3.png" />
+        </div>
+
+        <ProjectsCarousel />
+      </div>
+    </div>
+
+    <div class="space-y-[20px] lg:space-y-[24px]">
+      <div class="flex justify-center items-center md:justify-between">
+        <Heading class="">Projects Done in 2022</Heading>
+
+        <div class="hidden md:flex space-x-[12px]">
+          <div
+            class="bg-peach-98 p-[8px] border-peach-85 border-[1px] rounded-[6px]"
+          >
+            <Icon name="arrow-left" class="w-[26px] h-[26px]" />
+          </div>
+
+          <div
+            class="bg-peach-98 p-[8px] border-peach-85 border-[1px] rounded-[6px]"
+          >
+            <Icon name="arrow-right" class="w-[26px] h-[26px]" />
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-[40px] 3xl:space-y-[50px]">
+        <div class="hidden md:flex space-x-[20px] 3xl:space-x-[30px]">
+          <Project name="Current Vandi Website Design" image="/project4.png" />
+
+          <Project name="Fit Fusion Gym Website Design" image="/project5.png" />
+
+          <Project
+            name="DX Digital Agency Website Design"
+            image="/project6.png"
+          />
+        </div>
+
+        <ProjectsCarousel />
+      </div>
+    </div>
+
+    <div class="space-y-[20px] lg:space-y-[24px]">
+      <div class="flex justify-center items-center md:justify-between">
+        <Heading class="">Projects Done in 2021</Heading>
+
+        <div class="hidden md:flex space-x-[12px]">
+          <div
+            class="bg-peach-98 p-[8px] border-peach-85 border-[1px] rounded-[6px]"
+          >
+            <Icon name="arrow-left" class="w-[26px] h-[26px]" />
+          </div>
+
+          <div
+            class="bg-peach-98 p-[8px] border-peach-85 border-[1px] rounded-[6px]"
+          >
+            <Icon name="arrow-right" class="w-[26px] h-[26px]" />
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-[40px] 3xl:space-y-[50px]">
+        <div class="hidden md:flex space-x-[20px] 3xl:space-x-[30px]">
+          <Project
+            name="Little Learners Website Design"
+            image="/project7.png"
+          />
+
+          <Project name="StreamVibe Website Design" image="/project8.png" />
+
+          <Project name="YourBank Website Design" image="/project9.png" />
+        </div>
+
+        <ProjectsCarousel />
+      </div>
+    </div>
+  </div>
+</Container>

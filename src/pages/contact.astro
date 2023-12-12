@@ -1,5 +1,14 @@
 ---
+import ContactInformation from "../components/ContactInformation.astro";
+import ContactOverview from "../components/ContactOverview.astro";
+import FAQ from "../components/FAQ/index.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Contact Me" />
+<Layout title="Contact Me">
+  <ContactOverview />
+
+  <ContactInformation />
+
+  <FAQ />
+</Layout>

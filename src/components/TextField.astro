@@ -1,0 +1,12 @@
+---
+interface Props {
+  placeHolder: string
+}
+
+const {placeHolder} = Astro.props
+---
+
+<input
+  class="bg-peach-95 rounded-[6px] outline-none border-peach-90 border-[1px] space-y-[24px] lg:space-y-[30px] py-[20px] px-[24px]"
+  placeholder={placeHolder}
+/>

@@ -1,0 +1,57 @@
+---
+import Icon from "astro-icon";
+import Card from "../Card.astro";
+import Text from "../Text.astro";
+import Badge from "./Badge.astro";
+
+interface Props {
+  when: string;
+  title: string;
+  text: string;
+  color: string;
+}
+
+const { when, title, text, color } = Astro.props;
+---
+
+<div class="flex flex-col space-y-[40px] items-center">
+  <Badge>{when}</Badge>
+
+  <div class="space-y-[30px]">
+    <div class="flex justify-center">
+      <Badge>{title}</Badge>
+    </div>
+
+    <div class="pt-[12px]">
+      <Card class="pt-0 lg:pt-0 max-w-2xl">
+        <div class="relative flex justify-center top-[-13px]">
+          <div
+            class="p-[8px] rounded-full bg-white border-[4px] border-peach-96"
+          >
+            <div class="w-[10px] h-[10px] bg-blue rounded-full"></div>
+        </div>
+        </div>
+
+        <div
+          class="gap-[24px] flex flex-col sm:flex-row text-center sm:text-start items-center"
+        >
+          <div class="flex justify-center">
+            <div
+              class={"p-[10px] lg:p-[14px] rounded-[8px] bg-blue"}
+              style="box-shadow: 0px 0px 14px 4px rgba(255, 255, 255, 0.50) inset;"
+            >
+              <Icon
+                name={color}
+                class="w-[50px] h-[50px] lg:w-[64px] lg:h-[64px]"
+              />
+            </div>
+          </div>
+
+          <Text class="text-gray-20 text-[14px] lg:text-[16px]">
+            {text}<span class="underline">Read More</span>
+          </Text>
+        </div>
+      </Card>
+    </div>
+  </div>
+</div>
