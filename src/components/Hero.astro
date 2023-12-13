@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import heroImage from '../../public/hero1.png';
 import Button from "./Button.astro";
 import Heading from "./Heading.astro";
 import Text from "./Text.astro";
@@ -9,7 +11,7 @@ import Text from "./Text.astro";
     class="flex flex-col lg:flex-row-reverse space-y-[30px] lg:space-y-0 items-center"
   >
     <div class="">
-      <img src="/hero1.png" alt="hero" />
+      <Image src={heroImage} alt="hero" />
     </div>
 
     <div class="space-y-[40px] lg:space-y-[60px]">

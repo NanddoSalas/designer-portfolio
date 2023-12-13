@@ -1,7 +1,10 @@
 ---
+import { Image } from 'astro:assets';
+import aboutImage from '../../public/about.png';
 import Container from "../layouts/Container.astro";
 import Heading from "./Heading.astro";
 import Text from "./Text.astro";
+
 ---
 
 <Container>
@@ -9,7 +12,7 @@ import Text from "./Text.astro";
     class="flex flex-col lg:flex-row lg:mt-[50px] lg:space-x-[50px] space-y-[30px] lg:space-y-0 items-center"
   >
     <div class="flex-1">
-      <img src="/about.png" alt="about" />
+      <Image src={aboutImage} alt="about" />
     </div>
 
     <div class="flex-1 space-y-[40px]">
