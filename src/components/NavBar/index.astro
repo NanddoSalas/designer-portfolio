@@ -1,4 +1,5 @@
 ---
+import type { GetStaticPaths } from "astro";
 import Icon from "astro-icon";
 import Container from "../../layouts/Container.astro";
 import Button from "../Button.astro";
@@ -28,7 +29,31 @@ import NavItem from "./NavItem.astro";
         />
       </div>
 
-      <Icon name={'header-icon'} class="md:hidden w-[34px] h-[34px]" />
+      <Icon
+        name={"header-icon"}
+        class="md:hidden w-[34px] h-[34px] cursor-pointer select-none"
+        id="headerButton"
+      />
+    </div>
+
+    <div class="flex flex-col hidden md:hidden" id="mobileNavigation">
+      <NavItem name="Home" href="/" />
+      <NavItem name="About Me" href="/about" />
+      <NavItem name="Portfolio" href="/portfolio" />
+      <NavItem name="Contact Me" href="/contact" />
     </div>
   </Container>
 </div>
+
+<script>
+  const headerButton = document.getElementById("headerButton");
+  const mobileNavigation = document.getElementById("mobileNavigation");
+
+  headerButton?.addEventListener("click", () => {
+    if (mobileNavigation?.classList.contains("hidden")) {
+      mobileNavigation.classList.remove("hidden");
+    } else {
+      mobileNavigation?.classList.add("hidden");
+    }
+  });
+</script>
