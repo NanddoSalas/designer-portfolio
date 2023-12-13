@@ -17,20 +17,52 @@ const { name, answer } = Astro.props;
       {name}
     </Heading>
 
-    {answer && <Text class="text-[14px] lg:text-[16px]">{answer}</Text>}
+    {
+      answer ? (
+        <p class="text-[14px] lg:text-[16px] text-gray-30  answer  ">
+          {answer}
+        </p>
+      ) : (
+        <p class="text-[14px] lg:text-[16px] hidden text-gray-30 answer ">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+          interdum ultrices est. Donec sed placerat nisi. Ut ut fringilla
+          libero, vel scelerisque diam. Suspendisse vitae rhoncus nisl, a
+          pretium lacus. Proin eu tristique nulla. Curabitur sit amet volutpat
+          velit.
+        </p>
+      )
+    }
   </div>
 
   <div>
     <div
-      class="bg-peach-98 p-[8px] border-peach-85 border-[1px] rounded-[6px] ml-[40px]"
+      class="bg-peach-98 p-[8px] border-peach-85 border-[1px] rounded-[6px] ml-[40px] select-none cursor-pointer "
     >
       {
         answer ? (
-          <Icon name="x" class="w-[26px] h-[26px] rotate-45" />
+          <Icon name="x" class="w-[26px] h-[26px] rotate-45 duration-300 btn" />
         ) : (
-          <Icon name="x" class="w-[26px] h-[26px]" />
+          <Icon name="x" class="w-[26px] h-[26px] duration-100 btn" />
         )
       }
     </div>
   </div>
 </div>
+
+<script>
+  const btns = document.getElementsByClassName("btn");
+  const icons = document.getElementsByClassName("icon");
+  const answers = document.getElementsByClassName("answer");
+
+  for (let i = 0; i < btns.length; i++) {
+    btns[i].parentElement?.addEventListener("click", () => {
+      if (btns[i].classList.contains("rotate-45")) {
+        answers[i].classList.add("hidden");
+        btns[i].classList.remove("rotate-45");
+      } else {
+        answers[i].classList.remove("hidden");
+        btns[i].classList.add("rotate-45");
+      }
+    });
+  }
+</script>
