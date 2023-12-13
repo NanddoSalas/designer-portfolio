@@ -8,40 +8,77 @@ interface Props {
   when: string;
   title: string;
   text: string;
+  candle: string
   color: string;
+  reverse?: boolean;
 }
 
-const { when, title, text, color } = Astro.props;
+const { when, title, text,candle, color, reverse = false } = Astro.props;
 ---
 
-<div class="flex flex-col space-y-[40px] items-center">
+<div class="flex flex-col items-center">
   <Badge>{when}</Badge>
 
-  <div class="space-y-[30px]">
-    <div class="flex justify-center">
+  <div class="w-[2px] h-[40px] bg-purple-90 lg:hidden"></div>
+
+  <div class="flex flex-col items-center lg:grid grid-cols-[1fr_126px_1fr]">
+    <div
+      class="flex justify-center"
+      style={{
+        order: reverse ? 9999 : -9999,
+        justifyContent: reverse ? "start" : "end",
+      }}
+    >
       <Badge>{title}</Badge>
     </div>
 
-    <div class="pt-[12px]">
-      <Card class="pt-0 lg:pt-0 max-w-2xl">
-        <div class="relative flex justify-center top-[-13px]">
+    <div class="w-[2px] h-[30px] bg-purple-90 lg:hidden"></div>
+
+    <dir
+      class="max-w-[126px] hidden lg:flex flex-col items-center h-full m-0 p-0 col-start-2"
+    >
+      <div class="w-[2px] bg-purple-90 h-full"></div>
+
+      <div class="flex">
+        <div class="p-[8px] rounded-full bg-white border-[4px] border-peach-96">
+          <div class="w-[10px] h-[10px] rounded-full" style={{backgroundColor: color}}></div>
+        </div>
+      </div>
+
+      <div class="w-[2px] bg-purple-90 h-full"></div>
+    </dir>
+
+    <div
+      class="pt-[12px] lg:p-0 lg:flex items-center"
+      style={{ order: reverse ? -9999 : 9999 }}
+    >
+      {
+        !reverse && (
+          <div class="w-[12px] hidden lg:block">
+            <Icon name="tip-left" class="w-[12px] h-[23px]" />
+          </div>
+        )
+      }
+
+      <Card class="pt-0 lg:pt-[40px] max-w-2xl">
+        <div class="relative flex justify-center top-[-13px] lg:hidden">
           <div
             class="p-[8px] rounded-full bg-white border-[4px] border-peach-96"
           >
-            <div class="w-[10px] h-[10px] bg-blue rounded-full"></div>
-        </div>
+            <div class="w-[10px] h-[10px]  rounded-full" style={{backgroundColor: color}}></div>
+          </div>
         </div>
 
         <div
-          class="gap-[24px] flex flex-col sm:flex-row text-center sm:text-start items-center"
+          class="gap-[24px] flex flex-col sm:flex-row lg:flex-col text-center sm:text-start items-center lg:text-center xl:text-start xl:flex-row"
         >
           <div class="flex justify-center">
             <div
-              class={"p-[10px] lg:p-[14px] rounded-[8px] bg-blue"}
-              style="box-shadow: 0px 0px 14px 4px rgba(255, 255, 255, 0.50) inset;"
+              class={"p-[10px] lg:p-[14px] rounded-[8px] "}
+              style={{boxShadow: "0px 0px 14px 4px rgba(255, 255, 255, 0.50) inset", backgroundColor: color}}
             >
               <Icon
-                name={color}
+                name={candle}
                 class="w-[50px] h-[50px] lg:w-[64px] lg:h-[64px]"
               />
             </div>
@@ -52,6 +89,14 @@ const { when, title, text, color } = Astro.props;
           </Text>
         </div>
       </Card>
+
+      {
+        reverse && (
+          <div class="w-[12px] hidden lg:block">
+            <Icon name="tip-right" class="w-[12px] h-[23px]" />
+          </div>
+        )
+      }
     </div>
   </div>
 </div>
